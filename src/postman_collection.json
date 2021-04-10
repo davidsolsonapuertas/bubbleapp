@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "dffe56f1-46f5-412a-8dfa-247446aef603",
+		"name": "Bubble Tech Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"janet.stevans@siliconrhino.io\",\n  \"password\": \"12345\"\n}"
+				},
+				"url": {
+					"raw": "http://api-staging.joinbubble.co.uk/auth/local?web=0",
+					"protocol": "http",
+					"host": [
+						"api-staging",
+						"joinbubble",
+						"co",
+						"uk"
+					],
+					"path": [
+						"auth",
+						"local"
+					],
+					"query": [
+						{
+							"key": "web",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Logged In User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmNDRkM2ZmMzM2ZjE4MDc2NGYxMjY1ZiIsInR5cGUiOiJtb2JpbGUiLCJpYXQiOjE1OTk2NDg4ODksImV4cCI6MTY0Mzg4NTY4OX0.W4P1OsLIrqzA8-XILGBBrRl1iQYLy3NZSZBZus_zfbQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://api-staging.joinbubble.co.uk/api/user",
+					"protocol": "http",
+					"host": [
+						"api-staging",
+						"joinbubble",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for Local Sitters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmNDRkM2ZmMzM2ZjE4MDc2NGYxMjY1ZiIsInR5cGUiOiJtb2JpbGUiLCJpYXQiOjE1OTk2NDg4ODksImV4cCI6MTY0Mzg4NTY4OX0.W4P1OsLIrqzA8-XILGBBrRl1iQYLy3NZSZBZus_zfbQ"
+					}
+				],
+				"url": {
+					"raw": "http://api-staging.joinbubble.co.uk/api/search",
+					"protocol": "http",
+					"host": [
+						"api-staging",
+						"joinbubble",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Active Bookings for User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmNDRkM2ZmMzM2ZjE4MDc2NGYxMjY1ZiIsInR5cGUiOiJtb2JpbGUiLCJpYXQiOjE1OTk2NDg4ODksImV4cCI6MTY0Mzg4NTY4OX0.W4P1OsLIrqzA8-XILGBBrRl1iQYLy3NZSZBZus_zfbQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://api-staging.joinbubble.co.uk/api/booking/activesummary",
+					"protocol": "http",
+					"host": [
+						"api-staging",
+						"joinbubble",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"booking",
+						"activesummary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booking",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmNDRkM2ZmMzM2ZjE4MDc2NGYxMjY1ZiIsInR5cGUiOiJtb2JpbGUiLCJpYXQiOjE1OTk2NDg4ODksImV4cCI6MTY0Mzg4NTY4OX0.W4P1OsLIrqzA8-XILGBBrRl1iQYLy3NZSZBZus_zfbQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://api-staging.joinbubble.co.uk/api/booking/:id",
+					"protocol": "http",
+					"host": [
+						"api-staging",
+						"joinbubble",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"booking",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5f44ff8fe9a7e260d0e7e2f8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "261ad2b2-065f-4ba9-8618-bb70120fd15a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2c214dc8-c978-48da-958d-5b3911de7df9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

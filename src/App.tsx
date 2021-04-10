@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useContext, useEffect, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.css';
+import { Context } from './context/context';
 
 function App() {
+  const context = useContext(Context);
+
+  useEffect(() => {
+    if (!context.user) {
+      (async () => {
+        console.log(context.login());
+      })();
+    }
+    console.log(context.user);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/'>{/* <About /> */}</Route>
+        <Route path='/user/:id'>{/* <UserDetail /> */}</Route>
+      </Switch>
+    </Router>
   );
 }
 
