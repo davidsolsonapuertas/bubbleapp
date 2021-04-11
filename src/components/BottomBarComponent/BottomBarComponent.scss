@@ -1,0 +1,25 @@
+.bottomBar {
+  border-top: 1px solid rgba(63, 63, 63, 0.25);
+  height: 65px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottomBar .icon,
+.bottomBar p {
+  color: #3f3f3f;
+  font-size: small;
+  margin: 3px;
+}
+
+.bottomBar .bottomButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
