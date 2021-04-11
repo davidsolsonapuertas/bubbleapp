@@ -1,10 +1,55 @@
 Link,
 p,
-a {
+a,
+h1,
+h2,
+h3 {
   text-decoration: none;
   color: inherit;
+  font-family: 'QuicksandMedium';
 }
 
 .components {
-  margin-top: 55px;
+  h2 {
+    margin-top: 85px;
+    text-align: center;
+  }
+  margin: 65px 0px;
+}
+
+$bubblepurple: #55427a;
+$bubblegreen: #28b99d;
+$bubbleyellow: #f5a623;
+$bubblepink: #e15554;
+$bubbleblack: #3f3f3f;
+
+@function opacityrgba($rgbbubblecolor, $num4) {
+  @if ($rgbbubblecolor == 'rgbbubblepurple') {
+    @return rgba(85, 66, 122, $num4);
+  } @else if ($rgbbubblecolor == 'rgbbubblegreen') {
+    @return rgba(40, 185, 157, $num4);
+  } @else if ($rgbbubblecolor == 'rgbbubbleyellow') {
+    @return rgba(245, 166, 35, $num4);
+  } @else if ($rgbbubblecolor == 'rgbbubblepink') {
+    @return rgba(225, 85, 84, $num4);
+  } @else if ($rgbbubblecolor == 'rgbbubbleblack') {
+    @return rgba(63, 63, 63, $num4);
+  }
+}
+
+@font-face {
+  font-family: 'QuicksandRegular';
+  src: url('./assets/fonts/Quicksand-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'QuicksandMedium';
+  src: url('./assets/fonts/Quicksand-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'QuicksandBold';
+  src: url('./assets/fonts/Quicksand-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'QuicksandLight';
+  src: url('./assets/fonts/Quicksand-Light.ttf') format('truetype');
 }

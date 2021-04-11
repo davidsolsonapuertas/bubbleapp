@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import SitterCardComponent from './SitterCardComponent';
+
 import { IUser } from '../../interfaces/interfaces';
+import './SittersComponent.scss';
 
 function SittersComponent() {
   const [sitters, setSitters] = useState<IUser[] | undefined>(undefined);
-  console.log('hi');
 
   useEffect(() => {
     const localUsers = localStorage.getItem('localUsers');
@@ -13,11 +15,15 @@ function SittersComponent() {
   }, []);
 
   return (
-    <div>
+    <div className='sitters'>
+      <h2>Sitters near you</h2>
       {sitters &&
-        sitters?.map(
-          (sitter: IUser) => sitter.firstName && <p>{sitter.firstName}</p>,
-        )}
+        sitters
+          ?.sort((a, b) => (a.distanceInKm < b.distanceInKm ? -1 : 1))
+          .map(
+            (sitter: IUser) =>
+              sitter.firstName && <SitterCardComponent sitter={sitter} />,
+          )}
     </div>
   );
 }

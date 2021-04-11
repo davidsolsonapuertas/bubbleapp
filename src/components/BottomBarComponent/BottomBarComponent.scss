@@ -1,5 +1,8 @@
-.bottomBar {
-  border-top: 1px solid rgba(63, 63, 63, 0.25);
+@import '../../App';
+
+.bottombar {
+  border-top: 1px solid opacityrgba(rgbbubbleblack, 0.25);
+  background-color: white;
   height: 65px;
   position: fixed;
   bottom: 0;
@@ -7,19 +10,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+  z-index: 99;
+  outline: 0;
 
-.bottomBar .icon,
-.bottomBar p {
-  color: #3f3f3f;
-  font-size: small;
-  margin: 3px;
-}
+  .icon,
+  p {
+    color: $bubbleblack;
+    font-size: small;
+    margin: 3px;
+  }
 
-.bottomBar .bottomButton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0px;
+  .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+  }
 }

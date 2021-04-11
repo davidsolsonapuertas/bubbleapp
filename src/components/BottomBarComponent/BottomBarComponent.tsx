@@ -9,29 +9,29 @@ import './BottomBarComponent.scss';
 
 function BottomBarComponent() {
   return (
-    <div className='bottomBar'>
+    <div className='bottombar'>
       <Link to='/'>
-        <div className='bottomButton'>
+        <div className='button'>
           <SearchRoundedIcon className='icon' style={{ fontSize: 30 }} />
           <p>Dashboard</p>
         </div>
       </Link>
       <Link to='/sitters'>
-        <div className='bottomButton'>
+        <div className='button'>
           <PeopleRoundedIcon className='icon' style={{ fontSize: 30 }} />
           <p>Sitters</p>
         </div>
       </Link>
 
       <Link to='/bookings'>
-        <div className='bottomButton'>
+        <div className='button'>
           <CalendarTodayRoundedIcon className='icon' style={{ fontSize: 30 }} />
           <p>Bookings</p>
         </div>
       </Link>
 
       <Link to='/profile'>
-        <div className='bottomButton'>
+        <div className='button'>
           <PersonRoundedIcon className='icon' style={{ fontSize: 30 }} />
           <p>Profile</p>
         </div>

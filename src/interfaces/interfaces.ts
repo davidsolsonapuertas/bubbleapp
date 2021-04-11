@@ -77,6 +77,7 @@ export interface IUser {
   hasWifi?: boolean;
   hasNetflix?: boolean;
   hasTV?: boolean;
+  distanceInKm: number;
   // parking?: Tribo.Parking;
   // allergies?: Tribo.Allergy[];
   otherAllergies?: string;
