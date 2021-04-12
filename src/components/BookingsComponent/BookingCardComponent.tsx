@@ -15,10 +15,10 @@ function BookingCardComponent({ booking }: IProps) {
       <div className='body'>
         <div className='header'>
           <h3>{booking.otherUserFullName}</h3>
-          <p className='duration'>{booking.scheduledDuration}</p>
+          <p className='duration'>{booking.scheduledDuration} h.</p>
         </div>
         <p className='mt-20'>
-          {moment(booking.scheduledStart).format('MMM Do YY')}
+          Due on {moment(booking.scheduledStart).format('MMM Do YY')}
         </p>
       </div>
     </div>
