@@ -17,7 +17,7 @@ Bubble App is built in React.
 
 These instruction will help you setup a local development instance of the app.
 
-1. Run `npm install` to install the dependencies
+1. Run `yarn install` to install the dependencies
 2. Run `npm run start` to start the server
 3. Navigate to http://localhost:3000
 4. Enjoy Bubble App!
