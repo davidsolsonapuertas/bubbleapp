@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+import './ProfileComponent.scss';
 import { IUser } from '../../interfaces/interfaces';
+import profilepic from '../../assets/profile-image-example.png';
 
 function Profilecomponent() {
   const [user, setUser] = useState<IUser | undefined>(undefined);
@@ -12,7 +14,14 @@ function Profilecomponent() {
     }
   }, []);
 
-  return <div>{user?.firstName}</div>;
+  return (
+    <div className='profile'>
+      <div className='profile card'>
+        <img src={profilepic} alt={user?.firstName} />
+        {user?.firstName}
+      </div>
+    </div>
+  );
 }
 
 export default Profilecomponent;
