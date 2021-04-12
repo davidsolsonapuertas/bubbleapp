@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import MoreHorizRoundedIcon from '@material-ui/icons/MoreHorizRounded';
-import VerifiedUserRoundedIcon from '@material-ui/icons/VerifiedUserRounded';
 
 import './ProfileComponent.scss';
 import { IUser } from '../../interfaces/interfaces';
