@@ -16,9 +16,13 @@ function Profilecomponent() {
 
   return (
     <div className='profile'>
-      <div className='profile card'>
-        <img src={profilepic} alt={user?.firstName} />
-        {user?.firstName}
+      <div className='card'>
+        <img src={profilepic} alt={user?.fullName} />
+        <h2>{user?.fullName}</h2>
+        <p>
+          {user?.address?.postcode} {user?.address?.town}
+        </p>
+        <p>{user?.biography}</p>
       </div>
     </div>
   );

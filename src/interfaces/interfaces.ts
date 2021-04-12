@@ -62,6 +62,7 @@ export interface IUser {
   id?: string;
   email: string;
   firstName: string;
+  fullName: string;
   lastName: string;
   // accountType: AccountType;
   address?: {
