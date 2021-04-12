@@ -36,7 +36,9 @@ export interface IBooking {
   scheduledDateTime: string;
   bookingStatus: BookingStatusTypes;
   scheduledDuration: number;
+  imageUrl: string;
   specialRequirements: string;
+  otherUserFullName: string;
   parent: {
     id: string;
     referralCodeNumber?: number;

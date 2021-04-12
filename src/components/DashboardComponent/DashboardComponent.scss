@@ -1,0 +1,54 @@
+@import '../../App.scss';
+
+.dashboard {
+  margin-bottom: 100px;
+
+  .dashboardcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin: 15px 30px;
+    height: 170px;
+    border-radius: 20px;
+    background-size: cover;
+  }
+  .cardgroup {
+    display: flex;
+    margin: 15px 30px;
+    height: 150px;
+    justify-content: space-between;
+  }
+
+  .halfcard {
+    width: 48%;
+    border-radius: 20px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    color: white;
+    background-color: opacityrgba(rgbbubbleblack, 0.75);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 25px;
+  }
+  .sittings {
+    background-image: url('../../assets/cards/mysits.jpeg');
+  }
+  .plus {
+    background-image: url('../../assets/cards/bubbleplus.jpg');
+  }
+  .local {
+    background-image: url('../../assets/cards/tipsforagreatsit.jpeg');
+  }
+  .volunteering {
+    background-image: url('../../assets/cards/volunteering.jpg');
+  }
+  .info {
+    background-image: url('../../assets/cards/longterm.jpeg');
+  }
+}
