@@ -22,7 +22,9 @@ function SittersComponent() {
           ?.sort((a, b) => (a.distanceInKm < b.distanceInKm ? -1 : 1))
           .map(
             (sitter: IUser) =>
-              sitter.firstName && <SitterCardComponent sitter={sitter} />,
+              sitter.firstName && (
+                <SitterCardComponent sitter={sitter} key={sitter.id} />
+              ),
           )}
     </div>
   );

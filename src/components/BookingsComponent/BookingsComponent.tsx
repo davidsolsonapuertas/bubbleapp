@@ -28,7 +28,7 @@ function BookingsComponent() {
         confirmedBookings
           ?.sort((a, b) => (a.scheduledDateTime < b.scheduledDateTime ? -1 : 1))
           .map((booking: IBooking) => (
-            <BookingCardComponent booking={booking} />
+            <BookingCardComponent key={booking.id} booking={booking} />
           ))
       ) : (
         <p className='ml-20'>Nothing to see here yet!</p>
@@ -38,7 +38,7 @@ function BookingsComponent() {
         requestedBookings
           ?.sort((a, b) => (a.scheduledDateTime < b.scheduledDateTime ? -1 : 1))
           .map((booking: IBooking) => (
-            <BookingCardComponent booking={booking} />
+            <BookingCardComponent key={booking.id} booking={booking} />
           ))
       ) : (
         <p className='ml-20'>Nothing to see here yet!</p>
